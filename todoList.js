@@ -1,3 +1,4 @@
+console.log(firebase.database);
 let myTable = document.querySelector("#myTable");
 let myForm = document.querySelector("#my_form");
 let myInputFeild = document.querySelector("#input_task");
@@ -77,10 +78,32 @@ function addNewRowTable(e) {
   newRow.appendChild(td_1);
   newRow.appendChild(td_2);
   newRow.appendChild(td_3);
-  console.log(newRow);
+  // console.log(newRow);
 
   // add newrow to table
   myTable.appendChild(newRow);
+
+  let  key =  firebase.database().ref().push().getKey();
+  console.log(key);
+  // create obje for firebase
+  let my_obj = {
+      todo_list : myInputFeild.value,
+      key_ITEM: key
+  }
+  console.log(my_obj);
+
+  // firebase.database().ref('/TODO_DATA').push(my_obj);
+  // let key = 12;
+  firebase.database().ref(`/TODO_DATA/${key}`).set(my_obj);
+
+
+
+
+
+
+
+
+
   dynamicallyGenerateID();
   clearInputFeild();
   //   dynamicallyGenerateID();
