@@ -73,27 +73,24 @@
         </tbody>
       </table>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyB4lRNpezEbvs4DYx3EICJvoQfKmfDp2Bk",
+        authDomain: "my-project-db872.firebaseapp.com",
+        projectId: "my-project-db872",
+        storageBucket: "my-project-db872.appspot.com",
+        messagingSenderId: "364391408249",
+        appId: "1:364391408249:web:9be5dc00bf1324f9766aa8",
+        measurementId: "G-KEYRH0MS9J",
+      };
 
-<script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js"></script>
-
-
-   
-<script>
-    
-  const firebaseConfig = {
-    apiKey: "AIzaSyAV5GvZ_KsTu2Qgrt1UeaeTwiW2AG8turs",
-    authDomain: "todolistapp-5a515.firebaseapp.com",
-    projectId: "todolistapp-5a515",
-    storageBucket: "todolistapp-5a515.appspot.com",
-    messagingSenderId: "954500664534",
-    appId: "1:954500664534:web:0e9f36ed0a76260a570d77"
-  };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // const analytics = getAnalytics(app);
     </script>
     <script src="todoList.js"></script>
   </body>
 </html>
+
